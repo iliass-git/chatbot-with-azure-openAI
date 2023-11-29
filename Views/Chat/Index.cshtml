@@ -1,0 +1,17 @@
+﻿<div id = "chatBox">
+</div>
+<div id = "chatInput">
+    <input type = "text" id = "userMessage" />
+    <input type = "button" id = "chatInputButton" value = "Send" onclick="sendMessage()" />
+</div>
+
+<script>
+    function sendMessage() {
+        var userMessage = $("#userMessage").val();
+        $.post("/Chat/GetResponse", {userMessage: userMessage}, function(data) {
+            $("#chatBox").append("<p>" + userMessage + "</p>");
+            $("#chatBox").append("<p>" + data.response + "</p>");
+        });
+    }
+
+</script>
