@@ -1,0 +1,2 @@
+## Basic Chat bot using Azure OpenAI
+This a simple web application, built on the .NET 8 framework, follows the MVC pattern. It enables users to ask questions in natural language using the Azure OpenAI service.
